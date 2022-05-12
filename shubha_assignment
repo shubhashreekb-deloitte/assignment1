@@ -1,3 +1,5 @@
+Assignment-1
+
 create table Team_Details(SlNo int, teamname varchar(50), captain varchar(50), owner varchar(30), homeground varchar(30), primary key(teamname) )
 create table fixtures(matchno int, home_team varchar(50), away_team varchar(30), venue varchar(30), team_won varchar(30),team_lost varchar(30))
 create table points(teamname varchar(30), no_of_wins int, no_of_lose int, points int, foreign key(teamname) references team_details(teamname) )
