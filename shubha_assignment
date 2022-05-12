@@ -14,3 +14,4 @@ select * from fixtures
 select * from team_details where teamname='RCB' and homeground='Bangalore'
 
 select team_lost from fixtures where venue='Kolkata' 
+done.!!
