@@ -1,0 +1,14 @@
+create table Team_Details(SlNo int, teamname varchar(50), captain varchar(50), owner varchar(30), homeground varchar(30), primary key(teamname) )
+create table fixtures(matchno int, home_team varchar(50), away_team varchar(30), venue varchar(30), team_won varchar(30),team_lost varchar(30))
+create table points(teamname varchar(30), no_of_wins int, no_of_lose int, points int, foreign key(teamname) references team_details(teamname) )
+
+copy team_details(SlNo, teamname, captain, owner, homeground ) from 'C:\team_details.csv' DELIMITER ',' CSV HEADER
+select * from team_details
+select count(teamname) from team_details
+
+copy fixtures(matchno, home_team, away_team, venue, team_won, team_lost ) from 'C:\fixtures.csv' DELIMITER ',' CSV HEADER
+select * from fixtures
+
+select * from team_details where teamname='RCB' and homeground='Bangalore'
+
+select team_lost from fixtures where venue='Kolkata' 
